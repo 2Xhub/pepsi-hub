@@ -2504,7 +2504,7 @@ local posZ = 0
         game:GetService("ReplicatedStorage").Effect.Container.Respawn:Destroy()
     end
 
-    local ToggleMobAura = Tabs.Main:AddToggle("ToggleMobAura", {Title = "Auto Near Mob", Default = false })
+    local ToggleMobAura = Tabs.Main:AddToggle("ToggleMobAura", {Title = "Auto Nearest", Default = false })
     ToggleMobAura:OnChanged(function(Value)
         _G.AutoNear = Value
     end)
@@ -2644,7 +2644,7 @@ local posZ = 0
     end)
     Options.ToggleMasteryFruit:SetValue(false)
 
-    local ToggleMasteryGun = Tabs.Main:AddToggle("ToggleMasteryGun", {Title = "Auto Gun Mastery [ Bugs ]", Default = false })
+    local ToggleMasteryGun = Tabs.Main:AddToggle("ToggleMasteryGun", {Title = "Auto Gun Mastery", Default = false })
     ToggleMasteryGun:OnChanged(function(Value)
         AutoFarmMasGun = Value
     end)
@@ -3169,7 +3169,7 @@ Tabs.Main:AddParagraph({
     Content = "Bone & Cake Prince & Ectoplasm"
 })
 
-local ToggleBone = Tabs.Main:AddToggle("ToggleBone", {Title = "Farm Bone [ Beta ]", Default = false })
+local ToggleBone = Tabs.Main:AddToggle("ToggleBone", {Title = "Farm Bone", Default = false })
 ToggleBone:OnChanged(function(Value)
     _G.AutoBone = Value
 end)
@@ -3240,7 +3240,7 @@ spawn(function()
 end)
 
 
-local ToggleCake = Tabs.Main:AddToggle("ToggleCake", {Title = "Farm Katakuri [ Beta ]", Default = false })
+local ToggleCake = Tabs.Main:AddToggle("ToggleCake", {Title = "Farm Katakuri", Default = false })
 ToggleCake:OnChanged(function(Value)
  _G.CakePrince = Value
 end)
