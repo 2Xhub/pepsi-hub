@@ -3166,7 +3166,7 @@ end)
 
 Tabs.Main:AddParagraph({
     Title = "Misc Farm",
-    Content = "Bone & Katakuri "
+    Content = "Bone & Katakuri & Ectoplasm"
 })
 
 local ToggleBone = Tabs.Main:AddToggle("ToggleBone", {Title = "Farm Bone", Default = false })
@@ -3318,13 +3318,6 @@ spawn(function()
     end
     end)
 
-
-
-
-Tabs.Main:AddParagraph({
-    Title = "Misc Farm [ Sea 2 ]",
-    Content = "Ectoplasm"
-})
 
     local ToggleVatChatKiDi = Tabs.Main:AddToggle("ToggleVatChatKiDi", {Title = "Auto Farm Ectoplasm", Default = false })
     ToggleVatChatKiDi:OnChanged(function(Value)
