@@ -3373,10 +3373,6 @@ Tabs.Main:AddParagraph({
 
 
 
-
-
-
-
     Tabs.Main:AddParagraph({
         Title = "Boss Farm",
         Content = ""
