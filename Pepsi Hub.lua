@@ -3379,8 +3379,8 @@ spawn(function()
 	end
 
 
-    local SclectBoss = Tabs.Main:AddSclect("SclectBoss", {
-        Title = "Sclect",
+    local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
+        Title = "Dropdown",
         Values = tableBoss,
         Multi = false,
         Default = 1,
