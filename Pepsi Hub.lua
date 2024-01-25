@@ -3320,6 +3320,12 @@ spawn(function()
 
 
 
+
+Tabs.Main:AddParagraph({
+    Title = "Misc Farm [ Sea 2 ]",
+    Content = "Ectoplasm"
+})
+
     local ToggleVatChatKiDi = Tabs.Main:AddToggle("ToggleVatChatKiDi", {Title = "Auto Farm Ectoplasm", Default = false })
     ToggleVatChatKiDi:OnChanged(function(Value)
         _G.Ecto = Value
@@ -3388,8 +3394,8 @@ spawn(function()
 	end
 
 
-    local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
-        Title = "Dropdown",
+    local SclectBoss = Tabs.Main:AddSclect("SclectBoss", {
+        Title = "Sclect",
         Values = tableBoss,
         Multi = false,
         Default = 1,
@@ -3401,7 +3407,7 @@ spawn(function()
     end)
 
 
-	local ToggleAutoFarmBoss = Tabs.Main:AddToggle("ToggleAutoFarmBoss", {Title = "Killing Boss", Default = false })
+	local ToggleAutoFarmBoss = Tabs.Main:AddToggle("ToggleFarmBoss", {Title = "Kill Boss", Default = false })
 
     ToggleAutoFarmBoss:OnChanged(function(Value)
 		_G.AutoBoss = Value
@@ -3757,7 +3763,7 @@ if Third_Sea then
     })
 
 
-    local ToggleElite = Tabs.Main:AddToggle("ToggleElite", {Title = "Auto Elite Hunter", Default = false })
+    local ToggleElite = Tabs.Main:AddToggle("ToggleElite", {Title = "Kill Elite Hunter", Default = false })
 
     ToggleElite:OnChanged(function(Value)
        _G.AutoElite = Value
@@ -3830,7 +3836,7 @@ if Third_Sea then
 
        Tabs.Main:AddParagraph({
         Title = "Sea Beast",
-        Content = "Auto Kill Sea Beast"
+        Content = "Auto Sea Beast"
     })
 
 
@@ -4302,7 +4308,7 @@ end
 
 
 
-        local ToggleFactory = Tabs.Main:AddToggle("ToggleFactory", {Title = "Auto Farm Factory", Default = false })
+        local ToggleFactory = Tabs.Main:AddToggle("ToggleFactory", {Title = "Auto Farm Factory [ Beta ]", Default = false })
         ToggleFactory:OnChanged(function(Value)
             _G.Factory = Value
         end)
@@ -4362,7 +4368,7 @@ end
 
 
 
-_G.FastAttackDelay = 0.15
+_G.FastAttackDelay = 0.10
 
     local Client = game.Players.LocalPlayer
     local STOP = require(Client.PlayerScripts.CombatFramework.Particle)
@@ -4749,7 +4755,7 @@ Tabs.Teleport:AddParagraph({
 })
 
 Tabs.Teleport:AddButton({
-    Title = "First Sea",
+    Title = "Sea 1",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
@@ -4759,7 +4765,7 @@ Tabs.Teleport:AddButton({
 
 
 Tabs.Teleport:AddButton({
-    Title = "Second Sea",
+    Title = "Sea 2",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
@@ -4769,7 +4775,7 @@ Tabs.Teleport:AddButton({
 
 
 Tabs.Teleport:AddButton({
-    Title = "Third Sea",
+    Title = "Sea 3",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
@@ -5014,11 +5020,11 @@ spawn(function()
 end)
 
 
-local ToggleStore = Tabs.Fruit:AddToggle("ToggleStore", {Title = "Store Fruit", Default = false })
+local ToggleStore = Tabs.Fruit:AddToggle("ToggleStore", {Title = "Store Fruit", Default = true })
 ToggleStore:OnChanged(function(Value)
     _G.AutoStoreFruit = Value
 end)
-Options.ToggleStore:SetValue(false)
+Options.ToggleStore:SetValue(true)
 
 spawn(function()
     while task.wait() do
