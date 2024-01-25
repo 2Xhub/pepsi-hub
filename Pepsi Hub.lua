@@ -3371,14 +3371,10 @@ Tabs.Main:AddParagraph({
     end)
 
 
-
-
     Tabs.Main:AddParagraph({
         Title = "Boss Farm",
         Content = ""
     })
-
-
 
 
     if First_Sea then
